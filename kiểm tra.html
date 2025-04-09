@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thời trang</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 40px;
+    }
+
+    .logo img {
+      height: 100%;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
+    .logo img{
+    width: 100%;
+    height: 40px;
+    object-fit: cover;
+    
+  }
+    .icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .search-bar button {
+    padding: 3px 3px;
+}
+
+
+
+    .poster, .promotion  {
+    width: 100%;
+    border-radius: 100px 0px 100px 0px;
+    object-fit: cover;
+  }
+    .banner{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 30px 0 10px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product .product-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .cart-icon {
+      color: #555;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .price {
+    color: red;
+    font-weight: bold;
+  }
+    footer {
+      color: rgb(2, 0, 0);
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    #check {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    label[for="check"] {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 99;
+      }
+
+      #check:checked ~ .menu {
+        display: flex;
+      }
+
+      label[for="check"] {
+        display: block;
+      }
+
+      .poster {
+        display: none;
+      }
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .icons {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .promotion {
+        display: none;
+      }
+      .icons {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <input type="checkbox" id="check">
+    <label for="check" class="hamburger"><i class="fa fa-bars"></i></label>
+
+
+    <div class="menu">
+        <a href="#">NỮ</a>
+        <a href="#">NAM</a>
+        <a href="#">SIÊU DEAL T4 - SALE UPTO 70%</a>
+        <a href="#">BỘ SƯU TẬP</a>
+        <a href="#">VỀ CHÚNG TÔI</a>
+    </div>
+    <div class="logo">
+        <img src="logo-thoi-trang.webp" alt="logo">
+      </div>
+
+    <div class="icons">
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm">
+        <button>🔍</button>
+      </div>
+      
+    </div>
+  </header>
+
+  <img src="a1.png" alt="Spring/Summer Banner" class="poster">
+
+  <h2 class="section-title">NEW ARRIVAL</h2>
+
+  <section class="products">
+    <div class="product">
+      <img src="anh2.webp" alt="Bộ">
+      <div class="product-info">
+        <span>Áo sơ mi hoa lụa - 1.899.000 ₫</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="a3.png" alt="SP2">
+      <div class="product-info">
+        <span>Chân váy bút chì - 1.485.000 ₫ </span>
+        
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="a4.png" alt="SP3">
+      <div class="product-info">
+        <span>Áo ren cổ đức - 2.150.000 ₫</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="a5.png" alt="SP4">
+      <div class="product-info">
+        <span>Đầm ren xòe - 990.000 ₫</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title" style="color: red;"> GIẢM 50% CÁC SẢN PHẨM</h2>
+
+  <section class="products">
+    <div class="product">
+      <img src="a6.png" alt="Sale1">
+      <div class="product-info">
+        <span>Đầm lụa ren hoa - 1.480.000 ₫</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="a7.png" alt="Sale2">
+      <div class="product-info">
+        <span>Đầm xòe dạo phố - 845.000 ₫</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="a8.png" alt="Sale3">
+      <div class="product-info">
+        <span>Áo vest Sophia Elegance - 754.000 ₫</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="a9.png" alt="Sale4">
+      <div class="product-info">
+        <span>Áo khoác blazer cổ V Alice - 1.095.000 ₫</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <img src="a10.png" alt="Quảng cáo cuối" class="promotion">
+
+  <footer>
+    <Span class="footer-content">
+      <span>Họ tên sinh viên: Vũ Quỳnh Hương</span>
+      <span>Lớp: TUD D2024</span>
+    </Span>
+  </footer>
+</body>
+</html>
